@@ -1,0 +1,306 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+    color: #333;
+}
+
+.header-container {
+    background-color: #3A4D6D;
+    color: #fff;
+    padding: 1.0416666666666667vw 0;
+    text-align: center; /* Header'ı merkeze almak için */
+}
+
+.logo-container {
+    display: inline-flex; /* Inline-flex ile logo ve başlığı yan yana getiriyoruz */
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-image {
+    width: 2.6041666666666665vw;
+    height: 2.6041666666666665vw;
+    border-radius: 50%;
+    margin-right: 1.0416666666666667vw;
+}
+
+.header-container h1 {
+    margin: 0;
+    display: inline;
+}
+
+.animated-text {
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    background-color: #3A4D6D;
+    animation: revealText 4s ease-in-out infinite;
+    clip-path: inset(0 0 0 0); /* Başlangıçta metni tamamen gösteriyoruz */
+    opacity: 1; /* Başlangıçta opaklığı tam yapıyoruz */
+}
+
+@keyframes revealText {
+    0%, 50% {
+        clip-path: inset(0 100% 0 0); /* Yarı noktada metni tamamen gizli hale getiriyoruz */
+        opacity: 0; /* Yarı noktada opaklığı sıfıra indiriyoruz */
+    }
+    25%, 75% {
+        clip-path: inset(0 0 0 0); /* Yarı noktalarda metni tamamen gösteriyoruz */
+        opacity: 1; /* Yarı noktalarda opaklığı tam yapıyoruz */
+    }
+    100% {
+        clip-path: inset(0 100% 0 0); /* Sonunda metni tamamen gizli hale getiriyoruz */
+        opacity: 0; /* Sonunda opaklığı sıfıra indiriyoruz */
+    }
+}
+
+
+.logo-container {
+    display: inline-flex; /* Inline-flex ile logo ve başlığı yan yana getiriyoruz */
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-image {
+    width: 2.6041666666666665vw; /* veya istediğiniz boyut */
+    height: 2.6041666666666665vw; /* veya istediğiniz boyut */
+    border-radius: 50%; /* Yuvarlak yapmak için */
+    margin-right: 1.0416666666666667vw; /* Fotoğraf ile yazı arasında boşluk bırakmak için */
+}
+
+.header-container h1 {
+    margin: 0; /* Başlık ile fotoğraf arasındaki boşluğu kaldırmak için */
+    display: inline; /* Inline yaparak logo ve başlık arasında boşluk olmamasını sağlıyoruz */
+}
+
+.left-menu {
+    width: 20%;
+    float: left;
+    background-color: #E1F5FE;
+    height: 100vh;
+    padding-right:  0.5208333333333334vw;
+    text-align: center; /* Alt başlıkların metinlerini merkeze almak için */
+}
+
+.right-menu {
+    width: 20%;
+    float: right;
+    background-color: #E1F5FE;
+    height: 100vh;
+    padding-left:  0.5208333333333334vw;
+}
+
+.left-menu ul, .right-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-menu ul li a, .right-menu ul li a {
+    display: block;
+    padding: 0.78125vw;
+    border-bottom: 0.052083333333333336vw solid #ccc;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.left-menu ul li a:hover, .right-menu ul li a:hover {
+    background-color: #ccc;
+}
+
+.left-menu ul li:last-child, .right-menu ul li:last-child {
+    border-bottom: none;
+}
+.left-info {
+    float: left;
+    width: 20%;
+    padding: 1.0416666666666667vw;
+    background-color: #E1F5FE;
+    height: 100vh;
+    text-align: center;
+}
+
+.left-info p {
+    margin-bottom: 1.0416666666666667vw;
+    font-size: 0.8333333333333334vw;
+}
+
+.left-info p strong {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.2604166666666667vw;
+}
+.left-info a, .footer-container a {
+    text-decoration: none; /* Altı çiziyi kaldırır */
+    color: #333; /* Link rengini değiştirir */
+    transition: color 0.3s; /* Renk değişimini yumuşatır */
+}
+
+.left-info a:hover, .footer-container a:hover {
+    color: #0077cc; /* Linkin üzerine gelindiğinde renk değişimi */
+}
+
+.footer-container {
+    background-color: #3A4D6D;
+    color: #fff;
+    text-align: center;
+    padding:  0.5208333333333334vw 0;
+    position: fixed; /* Footer'ı sayfanın en altına sabitlemek için */
+    bottom: 0; /* Footer'ı sayfanın en altına yerleştirmek için */
+    width: 100%;
+    z-index: 2;
+}
+
+.footer-container p {
+    margin: 0;
+    display: inline-block; /* Yazıyı ortalamak için */
+    vertical-align: middle; /* Yazıyı ortalamak için */
+}
+
+.social-icons {
+    display: inline-block; /* Yazı ve ikonları yan yana getirmek için */
+    vertical-align: middle; /* Yazıyı ortalamak için */
+}
+
+.social-icons a {
+    margin-left: 0.78125vw; /* İkonlar arasında boşluk bırakmak için */
+    display: inline-block; /* İkonları yan yana getirmek için */
+}
+
+.social-icons img {
+    width: 1.5625vw; /* İkonların genişliğini ayarlamak için */
+    height: 1.5625vw; /* İkonların yüksekliğini ayarlamak için */
+    filter: grayscale();
+    
+}
+.social-icons img:hover{
+    filter: grayscale(0);
+}
+
+.content {
+    padding: 2.0833333333333335vw;
+    margin-left: 22%;
+    margin-right: 22%;
+    margin-top: 2.6041666666666665vw; /* Yukarıdan boşluk */
+    background-color: #fff;
+    box-shadow: 0 0  0.5208333333333334vw rgba(0, 0, 0, 0.1);
+    border-radius: 0.4166666666666667vw;
+}
+
+.content h1 {
+    color: #333;
+    border-bottom:  0.10416666666666667vw solid #333;
+    padding-bottom: 1.0416666666666667vw;
+    margin-bottom: 1.0416666666666667vw;
+}
+
+.content p {
+    line-height: 1.8;
+    font-size: 0.9375vw;
+}
+
+.contact-form {
+    max-width: 26.041666666666668vw;
+    margin: 2.0833333333333335vw auto;
+    background-color: #f9f9f9;
+    padding: 1.5625vw;
+    border-radius: 0.4166666666666667vw;
+    box-shadow: 0 0.20833333333333334vw 0.4166666666666667vw rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.0416666666666667vw;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom:  0.5208333333333334vw;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.625vw;
+    border: 0.052083333333333336vw solid #ccc;
+    border-radius: 0.20833333333333334vw;
+    font-size: 0.8333333333333334vw;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.form-group button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.625vw 1.25vw;
+    border: none;
+    border-radius: 0.20833333333333334vw;
+    cursor: pointer;
+    font-size: 0.8333333333333334vw;
+    transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #555;
+}
+
+.message-sent {
+    display: none;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 0.78125vw 1.0416666666666667vw;
+    border-radius: 0.20833333333333334vw;
+    margin-top: 1.0416666666666667vw;
+}
+
+.back-button-container {
+    margin-bottom: 1.0416666666666667vw; /* Ana içerikten aşağıya doğru biraz boşluk bırakmak için */
+}
+
+.back-button {
+    display: inline-block;
+    padding:  0.5208333333333334vw 0.78125vw;
+    color: #fff;
+    text-decoration: none;
+    background-color: #333; /* Arka plan rengi siyah */
+    border: 0.052083333333333336vw solid #333;
+    border-radius: 0.20833333333333334vw;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.background-image {
+    background-image: url('resim.jpeg'); /* Arka plan resmi burada belirtiliyor */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 28.645833333333332vw; /* Uzunluk ayarı, istediğiniz değere göre değiştirilebilir */
+    width: 100%; /* Genişlik ayarı */
+    margin-top: 1.0416666666666667vw; /* Paragrafın altından 20px aşağıda olacak şekilde ayarlanıyor */
+    border-radius: 60%;
+}
+
+.content {
+    /* ... */
+    position: relative; /* İçerik div'inin arka plan resminin üstünde olmasını sağlamak için */
+    z-index: 1; /* İçerik div'inin arka plan resminin üstünde olmasını sağlıyoruz */
+}
