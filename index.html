@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yusuf Cava</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="kendi_fotom.jpg.jpg" alt="Yusuf Cava Fotoğrafı" class="logo-image">
+                <h1 class="animated-text">Yusuf Cava</h1>
+            </div>
+        </div>
+    </header>
+
+    <nav class="left-menu">
+        <ul>
+            <li id="ana-sayfa"><a href="#" onclick="showContent('ana-sayfa-content')">Ana Sayfa</a></li>
+            <li><a href="hakkimda.html">Hakkımda</a></li>
+            <li><a href="hobilerim.html">Hobilerim</a></li>
+            <li><a href="egitim.html">Eğitim</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <nav class="right-menu">
+        <ul>
+            <li><a href="teknoloji.html">Teknoloji</a></li>
+            <li><a href="projelerim.html">Projelerim</a></li>
+        </ul>
+    </nav>
+    
+
+    <div class="content" id="ana-sayfa-content">
+        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Merhaba, ben Yusuf Cava. Kişisel web sayfama Hoşgeldiniz!</p>
+    </div>
+    <div class="background-image" ></div>
+
+    <footer class="footer-container">
+        <p>&copy; Yusuf Cava</p>
+        <div class="social-icons">
+            <a href="https://wa.me/+905465356025" target="_blank">
+                <img src="whatsapp_icon.png" alt="Whatsapp Icon">
+            </a>
+            <a href="https://www.instagram.com/cava.nse/" target="_blank">
+                <img src="instagram_icon.png" alt="Instagram Icon">
+            </a>
+            <a href="https://github.com/cava1290" target="_blank">
+                <img src="github_icon.png" alt="Github Icon">
+            </a>
+        </div>
+    </footer>
+    
+
+    <script>
+        function showContent(contentId) {
+            // Tüm içerikleri gizle
+            document.querySelectorAll('.content').forEach(function(content) {
+                content.style.display = 'none';
+            });
+
+            // Seçilen içeriği göster
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
